@@ -9,7 +9,7 @@ import { IInfo } from '../data';
 export class InfoCardComponent implements OnInit {
 
   @Input()
-  public item?: IInfo;
+  public item: IInfo;
 
   constructor() { }
 
