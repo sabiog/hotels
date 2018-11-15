@@ -6,6 +6,8 @@ import { WeatherComponent } from './weather/weather.component';
 import { RandomPhotoComponent } from './random-photo/random-photo.component';
 import { InfoComponent } from './info/info.component';
 import { InfoCardComponent } from './info-card/info-card.component';
+import { InfoFilterPipe } from './info-filter.pipe';
+import { PhonePipe } from './phone.pipe';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { InfoCardComponent } from './info-card/info-card.component';
     WeatherComponent,
     RandomPhotoComponent,
     InfoComponent,
-    InfoCardComponent
+    InfoCardComponent,
+    InfoFilterPipe,
+    PhonePipe
   ],
   imports: [
     BrowserModule

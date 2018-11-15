@@ -1,12 +1,22 @@
-<div class="element-bg-img"><img src="assets/img/1.jpg" alt="" class="img-responsive"> </div>
+<div class="element-bg-img">
+  <img src="assets/img/1.jpg" alt="" class="img-responsive"> </div>
 <div class="element-left-bottom">
   <div class="ele-strip">
-    <ul>
-      <li><a href="#">Hotel</a></li>
-      <li><a href="#">Fishing</a></li>
-      <li><a href="#">Tours</a></li>
-      <li class="anc-bor"><a href="#">Weather</a></li>
-    </ul>
+    <ng-container *ngIf="(types | async) as typess; else loadinBlock">
+      <ul>
+        <ng-container *ngFor="let type of typess; last as isLast">
+          <li *ngIf="!isLast; else lastLi">
+            <a href="#" (click)="selectType(type)">{{type}}</a>
+          </li>
+          <ng-template #lastLi>
+            <li class="anc-bor">
+              <a href="#" (click)="selectType(type)">{{type}}</a>
+            </li>
+          </ng-template>
+        </ng-container>
+        <!-- <li class="anc-bor"><a href="#" (onClick) = "selectType('weather');">Weather</a></li> -->
+      </ul>
+    </ng-container>
   </div>
   <div class="village">
     <h3>Righteous indignation & like</h3>
@@ -14,7 +24,7 @@
     <div class="activity_box">
       <div class="scrollbar" id="style-2">
         <ng-container *ngIf="(items$ | async) as items; else loadinBlock">
-          <hw-info-card *ngFor="let item of items" [item] = "item"></hw-info-card>
+          <hw-info-card *ngFor="let item of items | infoFilter: selectedType" [item]="item"></hw-info-card>
         </ng-container>
         <ng-template #loadinBlock>
           ...loading

@@ -2,7 +2,7 @@
   <div class="activity-desc">
     <h5>Адрес</h5>
     <p>{{item.address}}</p>
-    <h6>Тел.:{{item.phone}}</h6>
+    <h6 [textContent] = "item.phone | phone"></h6>
   </div>
   <div class="activity-img">
     <ul>
@@ -10,5 +10,5 @@
       <li><img [src]="item.img2" alt="" /></li>
     </ul>
   </div>
-  <div class="clear"> </div>
+  <div class="clear"></div>
 </div>
