@@ -6,15 +6,14 @@
       <ul>
         <ng-container *ngFor="let type of typess; last as isLast">
           <li *ngIf="!isLast; else lastLi">
-            <a href="#" (click)="selectType(type)">{{type}}</a>
+            <a (click)="selectType(type)" [textContent] = "type | firstCap"></a>
           </li>
           <ng-template #lastLi>
             <li class="anc-bor">
-              <a href="#" (click)="selectType(type)">{{type}}</a>
+              <a (click)="selectType(type)" [textContent] = "type | firstCap"></a>
             </li>
           </ng-template>
         </ng-container>
-        <!-- <li class="anc-bor"><a href="#" (onClick) = "selectType('weather');">Weather</a></li> -->
       </ul>
     </ng-container>
   </div>

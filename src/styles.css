@@ -29,6 +29,7 @@ img{max-width:100%;}
 }
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 a:hover {
   transition: 0.5s all;

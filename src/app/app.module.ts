@@ -8,6 +8,7 @@ import { InfoComponent } from './info/info.component';
 import { InfoCardComponent } from './info-card/info-card.component';
 import { InfoFilterPipe } from './info-filter.pipe';
 import { PhonePipe } from './phone.pipe';
+import { FirstCapPipe } from './first-cap.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PhonePipe } from './phone.pipe';
     InfoComponent,
     InfoCardComponent,
     InfoFilterPipe,
-    PhonePipe
+    PhonePipe,
+    FirstCapPipe
   ],
   imports: [
     BrowserModule
