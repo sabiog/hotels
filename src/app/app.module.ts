@@ -5,10 +5,12 @@ import { AppComponent } from './app.component';
 import { WeatherComponent } from './weather/weather.component';
 import { RandomPhotoComponent } from './random-photo/random-photo.component';
 import { InfoComponent } from './info/info.component';
-import { InfoCardComponent } from './info-card/info-card.component';
-import { InfoFilterPipe } from './info-filter.pipe';
-import { PhonePipe } from './phone.pipe';
-import { FirstCapPipe } from './first-cap.pipe';
+import { InfoCardComponent } from './info/info-card/info-card.component';
+import { InfoFilterPipe } from './info/info-filter.pipe';
+import { PhonePipe } from './info/info-card/phone.pipe';
+import { FirstCapPipe } from './info/first-cap.pipe';
+import { MenuComponent } from './info/menu/menu.component';
+import { DistinctPipe } from './info/distinct.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { FirstCapPipe } from './first-cap.pipe';
     InfoCardComponent,
     InfoFilterPipe,
     PhonePipe,
-    FirstCapPipe
+    FirstCapPipe,
+    MenuComponent,
+    DistinctPipe
   ],
   imports: [
     BrowserModule

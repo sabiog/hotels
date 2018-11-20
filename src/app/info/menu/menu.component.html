@@ -1,0 +1,7 @@
+<ul>
+  <ng-container *ngFor="let type of items; last as isLast">
+    <li [class.anc-bor]="isLast">
+      <a (click)="changeType(type)" [textContent]="type | firstCap"></a>
+    </li>
+  </ng-container>
+</ul>
