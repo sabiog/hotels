@@ -1,5 +1,4 @@
 import { Observable, of } from 'rxjs';
-import { delay } from 'rxjs/operators';
 
 export interface IWeather {
     'title': string;
@@ -43,7 +42,7 @@ const _data: IInfo[] = [
         'phone': 79997255225,
         'weather': {
             'title': 'Облачно',
-            'icon': 'assets/img/cloud.png',
+            'icon': 'cloud',
             'water': 20,
             'temperature': 14
         },
@@ -62,7 +61,7 @@ const _data: IInfo[] = [
         'phone': 78887255225,
         'weather': {
             'title': 'Облачно',
-            'icon': 'assets/img/cloud.png',
+            'icon': 'cloud',
             'water': -20,
             'temperature': -24
         },
@@ -81,7 +80,7 @@ const _data: IInfo[] = [
         'phone': 74951112233,
         'weather': {
             'title': 'Облачно',
-            'icon': 'assets/img/cloud.png',
+            'icon': 'cloud',
             'water': undefined,
             'temperature': 18
         },
@@ -100,7 +99,7 @@ const _data: IInfo[] = [
         'phone': 342227255225,
         'weather': {
             'title': 'Облачно',
-            'icon': 'assets/img/cloud.png',
+            'icon': 'cloud',
             'water': 20,
             'temperature': 20
         },
@@ -119,7 +118,7 @@ const _data: IInfo[] = [
         'phone': 79997255225,
         'weather': {
             'title': 'Облачно',
-            'icon': 'assets/img/cloud.png',
+            'icon': 'cloud',
             'water': 20,
             'temperature': 14
         },
@@ -138,7 +137,7 @@ const _data: IInfo[] = [
         'phone': 79997255225,
         'weather': {
             'title': 'Облачно',
-            'icon': 'assets/img/cloud.png',
+            'icon': 'cloud',
             'water': 20,
             'temperature': 14
         },
@@ -157,7 +156,7 @@ const _data: IInfo[] = [
         'phone': 79997255225,
         'weather': {
             'title': 'Облачно',
-            'icon': 'assets/img/cloud.png',
+            'icon': 'cloud',
             'water': 20,
             'temperature': 14
         },
@@ -176,7 +175,7 @@ const _data: IInfo[] = [
         'phone': 73217255225,
         'weather': {
             'title': 'Облачно',
-            'icon': 'assets/img/cloud.png',
+            'icon': 'cloud',
             'water': 20,
             'temperature': 14
         },

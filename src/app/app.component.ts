@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { IInfo } from 'src/app/data';
 
 @Component({
   selector: 'hw-root',
@@ -8,4 +9,9 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class AppComponent {
   title = 'hotel';
+  public selectedItem: IInfo;
+
+  showAdditionalInfo(item: IInfo) {
+    this.selectedItem = item;
+  }
 }

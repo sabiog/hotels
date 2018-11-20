@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ISocInfo } from 'src/app/data';
 
 @Component({
   selector: 'hw-random-photo',
   templateUrl: './random-photo.component.html',
   styleUrls: ['./random-photo.component.css']
 })
-export class RandomPhotoComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class RandomPhotoComponent {
+  @Input() item: ISocInfo;
 }
