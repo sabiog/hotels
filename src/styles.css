@@ -218,8 +218,14 @@ i.text-info{
     font-weight: bold;
 }
 .activity-row{
-	margin-bottom:1em;
+  margin-bottom:1em;
+  cursor: pointer;
+  padding: 10px;
 }
+.activity-row:hover{
+  background-color: rgba(218, 225, 231, 0.671);
+}
+
 .scrollbar{
 	height:115px;
 	background:#fff;

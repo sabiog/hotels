@@ -23,7 +23,7 @@ export interface IInfo {
         'title': string;
         'icon': string;
         'water'?: number;
-        'temperature': number;
+        'temperature'?: number;
     };
     'social_info': {
         'title': string;
@@ -119,7 +119,7 @@ const _data: IInfo[] = [
         'weather': {
             'title': 'Облачно',
             'icon': 'cloud',
-            'water': 20,
+            'water': 22,
             'temperature': 14
         },
         'social_info': {
@@ -138,14 +138,14 @@ const _data: IInfo[] = [
         'weather': {
             'title': 'Облачно',
             'icon': 'cloud',
-            'water': 20,
-            'temperature': 14
+            'water': 27,
+            'temperature': 28
         },
         'social_info': {
             'title': 'Профиль на сайте',
             'img': 'assets/img/b1.jpg',
-            'followers': 2850,
-            'following': 675
+            'followers': 13450,
+            'following': 67
         },
         'type': 'fishing'
     },
@@ -157,13 +157,13 @@ const _data: IInfo[] = [
         'weather': {
             'title': 'Облачно',
             'icon': 'cloud',
-            'water': 20,
-            'temperature': 14
+            'water': 16,
+            'temperature': 22
         },
         'social_info': {
             'title': 'Профиль на сайте',
             'img': 'assets/img/b1.jpg',
-            'followers': 2850,
+            'followers': 28850,
             'following': 675
         },
         'type': 'fishing'
@@ -176,14 +176,14 @@ const _data: IInfo[] = [
         'weather': {
             'title': 'Облачно',
             'icon': 'cloud',
-            'water': 20,
-            'temperature': 14
+            'water': 25,
+            'temperature': 25
         },
         'social_info': {
             'title': 'Профиль на сайте',
             'img': 'assets/img/b1.jpg',
-            'followers': 2850,
-            'following': 675
+            'followers': 45850,
+            'following': 75
         },
         'type': 'tour'
     }
