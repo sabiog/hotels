@@ -1,16 +1,16 @@
 <div class="element-bg-img">
   <img src="assets/img/1.jpg" alt="" class="img-responsive"> </div>
 <div class="element-left-bottom">
-  <ng-container *ngIf="(items$ | async) as items">
+  <ng-container *ngIf="items$ as items">
     <div class="ele-strip">
-      <hw-menu [items]="items | distinct" (typeChange)="selectType($event)"></hw-menu>
+      <hw-menu [items]="items | distinct"></hw-menu>
     </div>
     <div class="village">
-      <h3 [textContent] = "selectedType | firstCap"></h3>
-      <span class="line"> </span>
+      <h3 [textContent] = "getSelectedType() | firstCap"></h3>
+      <span class="line"></span>
       <div class="activity_box">
         <div class="scrollbar" id="style-2">
-          <hw-info-card *ngFor="let item of items | infoFilter: selectedType" [item]="item" (click)="getAdditionalInfo(item)"></hw-info-card>
+          <hw-info-card *ngFor="let item of items | infoFilter: getSelectedType()" [item]="item" (click)="selectItem(item)"></hw-info-card>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import { Input } from '@angular/core';
+import { InfoService } from 'src/app/info.service';
 
 @Component({
   selector: 'hw-menu',
@@ -11,9 +12,9 @@ export class MenuComponent {
   @Input()
   public items: Set<string>;
 
-  @Output() typeChange = new EventEmitter();
+  constructor(private data: InfoService) {}
 
-  changeType(type: string) {
-    this.typeChange.emit(type);
+  public changeType(type: string) {
+    this.data.selectType(type);
   }
 }

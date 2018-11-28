@@ -1,6 +1,6 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { data, IInfo } from 'src/app/data';
-import { Observable } from 'rxjs/internal/Observable';
+import { Component, OnInit } from '@angular/core';
+import { IInfo } from 'src/app/data';
+import { InfoService } from 'src/app/info.service';
 
 @Component({
   selector: 'hw-info',
@@ -9,20 +9,19 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class InfoComponent implements OnInit {
 
-  public items$: Observable<IInfo[]>;
-  public selectedType = 'all';
+  public items$: IInfo[];
 
-  @Output() itemSelect = new EventEmitter();
+  constructor(private data: InfoService) {}
 
   ngOnInit() {
-    this.items$ = data;
+    this.data.getData().subscribe((data: IInfo[]) => { this.items$ = data; });
   }
 
-  selectType(type: string) {
-    this.selectedType = type;
+  public getSelectedType(): string {
+    return this.data.getSelectedType();
   }
 
-  getAdditionalInfo(item: IInfo) {
-    this.itemSelect.emit(item);
+  public selectItem(item: IInfo) {
+    this.data.selectItem(item);
   }
 }

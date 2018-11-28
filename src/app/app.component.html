@@ -1,10 +1,10 @@
 <h1>Hot Weather Widget</h1>
 <div class="element">
   <div class="element-left">
-    <hw-info (itemSelect) = "showAdditionalInfo($event)"></hw-info>
+    <hw-info></hw-info>
   </div>
   <div class="element-right">
-    <ng-container *ngIf="(selectedItem) as item">
+    <ng-container *ngIf="(getSelectedItem()) as item">
       <hw-weather [item] = "item.weather"></hw-weather>
       <hw-random-photo [item] = "item.social_info"></hw-random-photo>
     </ng-container>
